@@ -1,0 +1,133 @@
+/* Определяем анимацию для появления слева */
+@keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Определяем анимацию для появления снизу */
+  @keyframes slideInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Определяем анимацию для появления справа */
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  /* Анимация для плавного появления (fade-in) */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Анимация для появления сверху */
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Смещаем на 50px вверх */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Возвращаем в исходное положение */
+    }
+}
+
+  
+  /* Базовое состояние карточек - невидимые и с плавным переходом */
+  .page-3 .speaker-card {
+      opacity: 0; /* Изначально невидимые */
+      transform: none; /* Устанавливаем начальное transform в 'none' для плавного перехода обратно */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Добавляем плавный переход */
+  }
+  
+  
+  /* Определяем анимацию для первой карточки, когда она становится видимой */
+  /* При добавлении класса is-visible запускается animation */
+  .page-3.is-visible .speaker-card:nth-child(1) {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+  
+  /* Определяем анимацию для второй карточки, когда она становится видимой */
+  .page-3.is-visible .speaker-card:nth-child(2) {
+    animation: slideInBottom 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+  
+  /* Определяем анимацию для третьей карточки, когда она становится видимой */
+  .page-3.is-visible .speaker-card:nth-child(3) {
+    animation: slideInRight 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+
+  .page-3.is-visible .ideas:nth-child(1) {
+    animation: fadeIn 2s ease-out forwards;
+  }
+
+  .page-3.is-visible .ideas:nth-child(2) {
+    animation: fadeIn 2s ease-out forwards;
+  }
+  
+
+  .page-3.is-visible .ideas:nth-child(3) {
+    animation: fadeIn 2s ease-out forwards;
+  }
+
+
+/* Анимация для появления снизу (уже есть slideInBottom, можно переиспользовать или создать новую) */
+
+/* Стиль для page-4 (карты): начальное состояние и переход */
+.page-4 .map-container > * { /* Применяем к прямым потомкам .map-container (h2 и .map-wrapper) */
+    opacity: 0; /* Изначально невидимы */
+    transition: opacity 0.8s ease-out; /* Плавный переход по opacity */
+}
+
+/* Стиль для page-4 (карты): анимация при видимости */
+.page-4.is-visible .map-container > * {
+    animation: fadeIn 1.6s ease-out forwards; /* Применяем анимацию плавного появления */
+}
+
+
+/* Стиль для page-5 (формы): начальное состояние и переход */
+/* Применяем к h2 и .form-wrapper внутри .registration-form */
+.page-5 .registration-form h2,
+.page-5 .registration-form .form-wrapper {
+    opacity: 0; /* Изначально невидимы */
+    transform: translateY(0); /* Начальное transform для плавного перехода */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Плавный переход */
+}
+
+/* Стиль для page-5 (формы): анимация заголовка при видимости (сверху) */
+.page-5.is-visible .registration-form h2 {
+    animation: slideInTop 0.8s ease-out forwards;
+}
+
+/* Стиль для page-5 (формы): анимация формы при видимости (снизу) */
+.page-5.is-visible .registration-form .form-wrapper {
+    animation: slideInBottom 0.8s ease-out forwards; /* Используем существующую анимацию снизу */
+    animation-delay: 0.3s; /* Добавляем задержку для формы */
+}
