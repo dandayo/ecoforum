@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100">
+<body class="bg-lime-200">
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
@@ -24,23 +24,23 @@
     <main>
         <section class="carousel-container w-full h-[100vh] items-center relative flex">
             <div class="main-page w-3/5 ml-[150px] z-10 ">
-                <h1 class="text-emerald-50 text-5xl font-sans ">ЭКОФОРУМ «ГИПЕРБОРЕЯ-КОВДОР ПЕРЕЗАГРУЗКА»</h1>
+                <h1 class="text-stone-50 text-5xl font-sans ">ЭКОФОРУМ «ГИПЕРБОРЕЯ-КОВДОР ПЕРЕЗАГРУЗКА»</h1>
             </div>
-            <div class="carousel brightness-[.8] flex-none z-0">
+            <div class="carousel brightness-[1] flex-none z-0">
                 <div class="carousel-slide active ">
-                    <img src="/img/img_4.jpg" alt="Nature 1" class="w-full h-full object-cover">
+                    <img src="img/img_4.jpg" alt="Nature 1" class="w-full h-full object-cover">
                     <div 
                         class="absolute top-0 left-0 bottom-0 w-2/3  bg-gradient-to-r from-black/80 to-transparent  pointer-events-none">
                     </div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="/img/img_2.jpg" alt="Nature 2" class="w-full h-full object-cover">
+                    <img src="img/img_2.jpg" alt="Nature 2" class="w-full h-full object-cover">
                     <div 
                         class="absolute top-0 left-0 bottom-0 w-2/3  bg-gradient-to-r from-black/80 to-transparent  pointer-events-none">
                     </div>
                 </div>
                 <div class="carousel-slide">
-                    <img src="/img/img_5.jpg" alt="Nature 3" class="w-full h-full object-cover">
+                    <img src="img/img_5.jpg" alt="Nature 3" class="w-full h-full object-cover">
                     <div 
                         class="absolute top-0 left-0 bottom-0 w-2/3  bg-gradient-to-r from-black/80 to-transparent  pointer-events-none">
                     </div>
@@ -48,16 +48,24 @@
             </div>
         </section>
 
-        <section class="speakers" >
-            <div class="speaker">
+        <section class="speakers w-5/6 mt-20 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"> 
+            <div class="speaker-card border border-lime-600 rounded-lg flex flex-col items-center justify-center h-[400px] p-4"> 
+                <h3 class="text-xl font-bold mb-2">Спикер 1</h3>
+                <p class="text-center">Краткое описание спикера...</p> 
             </div>
-            <div class="speaker">
+            
+            <div class="speaker-card border border-lime-600 rounded-lg flex flex-col items-center justify-center h-[400px] p-4">
+                <h3 class="text-xl font-bold mb-2">Спикер 2</h3>
+                <p class="text-center">Краткое описание спикера...</p> 
             </div>
-            <div class="speaker">
+            
+            <div class="speaker-card border border-lime-600 rounded-lg flex flex-col items-center justify-center h-[400px] p-4">
+                <h3 class="text-xl font-bold mb-2">Спикер 3</h3>
+                <p class="text-center">Краткое описание спикера...</p> 
             </div>
         </section>
 
-        <section class="container mx-auto px-6 py-8">
+        <section class="container mt-[20px] mx-auto px-6 py-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h2 class="text-xl font-semibold text-gray-800 mb-3">Заголовок 1</h2>
@@ -72,6 +80,10 @@
                     <p class="text-gray-600">Описание третьего блока контента.</p>
                 </div>
             </div>
+        </section>
+
+        <section class="map mt-[20px] flex justify-center relative">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8ea2fcbb74269d1f21f800f3b1f8089ea64e10eb7c1190b8c776e1ab937e77c1&amp;source=constructor" width="1200" height="498" frameborder="0"></iframe>
         </section>
     </main>
 
