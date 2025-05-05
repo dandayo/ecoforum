@@ -48,7 +48,11 @@
             </div>
         </section>
 
-        <section class="speakers w-5/6 mt-20 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"> 
+        <section>
+
+        </section>
+
+        <section class="speakers  mt-20 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 bg-lime-300 p-10 "> 
             <div class="speaker-card border border-lime-600 rounded-lg flex flex-col items-center justify-center h-[400px] p-4"> 
                 <h3 class="text-xl font-bold mb-2">Спикер 1</h3>
                 <p class="text-center">Краткое описание спикера...</p> 
@@ -65,7 +69,7 @@
             </div>
         </section>
 
-        <section class="container mt-[20px] mx-auto px-6 py-8">
+        <section class="container mt-[20px]  mx-auto px-6 py-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h2 class="text-xl font-semibold text-gray-800 mb-3">Заголовок 1</h2>
@@ -82,8 +86,34 @@
             </div>
         </section>
 
-        <section class="map mt-[20px] flex justify-center relative">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8ea2fcbb74269d1f21f800f3b1f8089ea64e10eb7c1190b8c776e1ab937e77c1&amp;source=constructor" width="1200" height="498" frameborder="0"></iframe>
+        <section class="map-container mt-10 bg-lime-300 p-10 mb-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">Место проведения</h2>
+                <div class="map-wrapper rounded-lg shadow-xl overflow-hidden">
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A8ea2fcbb74269d1f21f800f3b1f8089ea64e10eb7c1190b8c776e1ab937e77c1&amp;source=constructor" 
+                        width="100%" 
+                        height="500" 
+                        frameborder="0"
+                        class="w-full">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="registration-form bg-lime-200 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">Регистрируйся!</h2>
+                <div class="form-wrapper bg-white rounded-lg shadow-xl p-8 max-w-4xl mx-auto">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdGU6r2iKqddEgXQP_APtCx2b10F2Zu26_gYDMR5BkdCKo20w/viewform" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0"
+                        class="w-full">
+                    </iframe>
+                </div>
+            </div>
         </section>
     </main>
 
