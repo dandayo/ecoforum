@@ -9,29 +9,32 @@ document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
+                        // Если элемент становится видимым (входит в область видимости)
                         entry.target.classList.add('is-visible');
+                        entry.target.classList.remove('no-visible'); // Удаляем класс исчезновения
                     } else {
-                        entry.target.classList.remove('is-visible');
+                        // Если элемент перестает быть видимым (покидает область видимости)
+                        entry.target.classList.remove('is-visible'); // Удаляем класс появления
+                        entry.target.classList.add('no-visible');    // Добавляем класс исчезновения
                     }
+
                 });
             }, {
                 rootMargin: '0px',
-                threshold: 0 // Срабатывает при любом пересечении
+                threshold: [0.5]
             });
 
             observer.observe(section);
         }
     };
 
-    // Отслеживаем секцию со спикерами
-    createSectionObserver('.page-2');
-    
+    // Отслеживаем секции, для которых нужна анимация
+    createSectionObserver('.page-1'); 
+    createSectionObserver('.page-2'); 
     createSectionObserver('.page-3');
-
-    // Отслеживаем секцию page-4 (карты)
     createSectionObserver('.page-4');
-
-    // Отслеживаем секцию page-5 (форма регистрации)
     createSectionObserver('.page-5');
+    createSectionObserver('.page-6');
+    createSectionObserver('.page-7');
 
 });

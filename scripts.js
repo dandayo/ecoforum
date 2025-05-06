@@ -26,7 +26,7 @@ class Carousel {
     }
 
     startAutoSlide() {
-        this.interval = setInterval(() => this.nextSlide(), 5000);
+        this.interval = setInterval(() => this.nextSlide(), 4000);
     }
 
     stopAutoSlide() {
@@ -38,3 +38,5 @@ class Carousel {
 document.addEventListener('DOMContentLoaded', () => {
     new Carousel();
 }); 
+
+

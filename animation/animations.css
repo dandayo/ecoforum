@@ -1,133 +1,286 @@
-/* Определяем анимацию для появления слева */
 @keyframes slideInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-200px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* Определяем анимацию для появления снизу */
-  @keyframes slideInBottom {
-    0% {
-      opacity: 0;
-      transform: translateY(200px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Определяем анимацию для появления справа */
-  @keyframes slideInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(200px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-
-  /* Анимация для плавного появления (fade-in) */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% { opacity: 0; transform: translateX(-250px); }
+    100% { opacity: 1; transform: translateX(0); }
 }
 
-/* Анимация для появления сверху */
+@keyframes slideInBottom {
+    0% { opacity: 0; transform: translateY(250px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(250px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
 @keyframes slideInTop {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px); /* Смещаем на 50px вверх */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Возвращаем в исходное положение */
-    }
+    0% { opacity: 0; transform: translateY(-250px); } 
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-  
-  /* Базовое состояние карточек - невидимые и с плавным переходом */
-  .page-3 .speaker-card {
-      opacity: 0; /* Изначально невидимые */
-      transform: none; /* Устанавливаем начальное transform в 'none' для плавного перехода обратно */
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Добавляем плавный переход */
-  }
-  
-  
-  /* Определяем анимацию для первой карточки, когда она становится видимой */
-  /* При добавлении класса is-visible запускается animation */
-  .page-3.is-visible .speaker-card:nth-child(1) {
-    animation: slideInLeft 0.8s ease-out forwards;
-  }
-  
-  /* Определяем анимацию для второй карточки, когда она становится видимой */
-  .page-3.is-visible .speaker-card:nth-child(2) {
-    animation: slideInBottom 0.8s ease-out forwards;
-    animation-delay: 0.2s;
-  }
-  
-  /* Определяем анимацию для третьей карточки, когда она становится видимой */
-  .page-3.is-visible .speaker-card:nth-child(3) {
-    animation: slideInRight 0.8s ease-out forwards;
-    animation-delay: 0.4s;
-  }
-
-  .page-3.is-visible .ideas:nth-child(1) {
-    animation: fadeIn 2s ease-out forwards;
-  }
-
-  .page-3.is-visible .ideas:nth-child(2) {
-    animation: fadeIn 2s ease-out forwards;
-  }
-  
-
-  .page-3.is-visible .ideas:nth-child(3) {
-    animation: fadeIn 2s ease-out forwards;
-  }
-
-
-/* Анимация для появления снизу (уже есть slideInBottom, можно переиспользовать или создать новую) */
-
-/* Стиль для page-4 (карты): начальное состояние и переход */
-.page-4 .map-container > * { /* Применяем к прямым потомкам .map-container (h2 и .map-wrapper) */
-    opacity: 0; /* Изначально невидимы */
-    transition: opacity 0.8s ease-out; /* Плавный переход по opacity */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
+
+.page-1 h1,
+.page-1 p { 
+    opacity: 0;
+    transform: none; 
+}
+
+.page-1.is-visible h1 {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.page-1.is-visible p:nth-of-type(1) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.page-1.is-visible p:nth-of-type(2) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.7s;
+}
+
+.page-1.is-visible p:nth-of-type(3) {
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+/* Базовое состояние карточек и заголовков в page-3 */
+/* Изначально невидимые, готовые к анимации появления */
+.page-3 .speaker-card, .page-3 h1,
+.page-3 .ideas { 
+    opacity: 0;
+    transform: none; 
+}
+
+
+/* Анимации появления при добавлении класса is-visible */
+.page-3.is-visible h1 {
+  animation: slideInTop 1.2s ease-out forwards;
+}
+
+.page-3.is-visible .speaker-card:nth-child(1) {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.page-3.is-visible .speaker-card:nth-child(2) {
+  animation: slideInTop 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.page-3.is-visible .speaker-card:nth-child(3) {
+  animation: slideInRight 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.page-3.is-visible .ideas:nth-child(1) {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.page-3.is-visible .ideas:nth-child(2) {
+  animation: fadeIn 2.5s ease-out forwards;
+}
+
+.page-3.is-visible .ideas:nth-child(3) {
+  animation: fadeIn 3s ease-out forwards;
+}
+
+
+
+/* Стиль для page-4 (карты): начальное состояние */
+.page-4 .map-container > * {
+    opacity: 0;
+}
+
+
 
 /* Стиль для page-4 (карты): анимация при видимости */
 .page-4.is-visible .map-container > * {
-    animation: fadeIn 1.6s ease-out forwards; /* Применяем анимацию плавного появления */
+    animation: fadeIn 1.9s ease-out forwards;
 }
 
 
-/* Стиль для page-5 (формы): начальное состояние и переход */
-/* Применяем к h2 и .form-wrapper внутри .registration-form */
+
+/* Стиль для page-5 (формы): начальное состояние */
 .page-5 .registration-form h2,
 .page-5 .registration-form .form-wrapper {
-    opacity: 0; /* Изначально невидимы */
-    transform: translateY(0); /* Начальное transform для плавного перехода */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Плавный переход */
+    opacity: 0;
 }
 
-/* Стиль для page-5 (формы): анимация заголовка при видимости (сверху) */
+/* Стиль для page-5 (формы): анимация при видимости */
 .page-5.is-visible .registration-form h2 {
-    animation: slideInTop 0.8s ease-out forwards;
+    animation: slideInTop .8s ease-out forwards;
 }
 
-/* Стиль для page-5 (формы): анимация формы при видимости (снизу) */
 .page-5.is-visible .registration-form .form-wrapper {
-    animation: slideInBottom 0.8s ease-out forwards; /* Используем существующую анимацию снизу */
-    animation-delay: 0.3s; /* Добавляем задержку для формы */
+    animation: slideInBottom .8s ease-out forwards;
+}
+
+
+/* Стиль для page-6 (формы): анимация при видимости */
+.page-6 .image-item, .page-6 h2 {
+    opacity: 0;
+}
+
+.page-6.is-visible h2 {
+    animation: fadeIn 1.9s ease-out forwards;;
+}
+
+.page-6.is-visible .image-item:nth-child(1) {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.page-6.is-visible .image-item:nth-child(2) {
+    animation: slideInTop 1s ease-out forwards;
+}
+.page-6.is-visible .image-item:nth-child(3) {
+    animation: slideInRight 1s ease-out forwards;
+}
+.page-6.is-visible .image-item:nth-child(4) {
+    animation: slideInLeft 1s ease-out forwards;
+}
+.page-6.is-visible .image-item:nth-child(5) {
+    animation: slideInLeft 1s ease-out forwards;
+}
+.page-6.is-visible .image-item:nth-child(6) {
+    animation: slideInBottom 1s ease-out forwards;
+}
+.page-6.is-visible .image-item:nth-child(7) {
+    animation: slideInBottom 1s ease-out forwards;
+}
+.page-6.is-visible .image-item:nth-child(8) {
+    animation: slideInRight 1s ease-out forwards;
+}
+.page-6.is-visible .image-item:nth-child(9) {
+    animation: slideInBottom 1s ease-out forwards;
+}
+.page-6.is-visible .image-item:nth-child(10) {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.page-6.is-visible .image-item:nth-child(1) { animation-delay: 0.1s; }
+.page-6.is-visible .image-item:nth-child(2) { animation-delay: 0.2s; }
+.page-6.is-visible .image-item:nth-child(3) { animation-delay: 0.3s; }
+.page-6.is-visible .image-item:nth-child(4) { animation-delay: 0.4s; }
+.page-6.is-visible .image-item:nth-child(5) { animation-delay: 0.5s; }
+.page-6.is-visible .image-item:nth-child(6) { animation-delay: 0.6s; }
+.page-6.is-visible .image-item:nth-child(7) { animation-delay: 0.7s; }
+.page-6.is-visible .image-item:nth-child(8) { animation-delay: 0.8s; }
+.page-6.is-visible .image-item:nth-child(9) { animation-delay: 0.9s; }
+.page-6.is-visible .image-item:nth-child(10) { animation-delay: 1.0s; }
+
+
+
+/* --- Анимации исчезновения no-visible --- */
+
+/* Переименуем существующие keyframes для ясности */
+@keyframes slideOutLeft { 
+    0% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(-250px); } 
+}
+
+@keyframes slideOutUp {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-250px); } 
+}
+@keyframes slideOutBottom { 
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(250px); } 
+}
+
+@keyframes slideOutRight {
+    0% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(250px); } 
+}
+
+/* Анимация для плавного удаления */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Применение анимаций исчезновения для page-3 no-visible */
+.page-3.no-visible h1 {
+  animation: slideOutUp 0.8s ease-out forwards; 
+}
+
+.page-3.no-visible .speaker-card:nth-child(1) {
+  animation: slideOutLeft 0.8s ease-out forwards; 
+}
+
+.page-3.no-visible .speaker-card:nth-child(2) {
+  animation: slideOutUp  0.8s ease-out forwards; 
+}
+
+.page-3.no-visible .speaker-card:nth-child(3) {
+  animation: slideOutRight 0.8s ease-out forwards; 
+}
+
+.page-3.no-visible .ideas:nth-child(1) {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+.page-3.no-visible .ideas:nth-child(2) {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+.page-3.no-visible .ideas:nth-child(3) {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+
+/* Пример для page-4: */
+.page-4.no-visible .map-container > * {
+    animation: fadeOut 0.8s ease-out forwards;
+}
+
+/* Пример для page-5: */
+.page-5.no-visible .registration-form h2 {
+    animation: slideOutBottom 0.8s ease-out forwards;
+}
+
+.page-5.no-visible .registration-form .form-wrapper {
+    animation: slideOutBottom 0.8s ease-out forwards; 
+}
+
+
+/* Применение анимаций исчезновения для page-6 no-visible */
+
+.page-6.no-visible h2 {
+    animation: fadeOut .9s ease-out forwards;;
+}
+
+.page-6.no-visible .image-item:nth-child(1) {
+    animation: slideOutLeft 0.7s ease-out forwards;
+}
+
+.page-6.no-visible .image-item:nth-child(2) {
+    animation: slideOutUp 0.7s ease-out forwards;
+}
+.page-6.no-visible .image-item:nth-child(3) {
+    animation: slideOutRight 0.7s ease-out forwards;
+}
+.page-6.no-visible .image-item:nth-child(4) {
+    animation: slideOutLeft 0.7s ease-out forwards;
+}
+.page-6.no-visible .image-item:nth-child(5) {
+    animation: slideOutLeft 0.7s ease-out forwards;
+}
+.page-6.no-visible .image-item:nth-child(6) {
+    animation: slideOutBottom 0.7s ease-out forwards;
+}
+.page-6.no-visible .image-item:nth-child(7) {
+    animation: slideOutBottom 0.7s ease-out forwards;
+}
+.page-6.no-visible .image-item:nth-child(8) {
+    animation: slideOutRight 0.7s ease-out forwards;
+}
+.page-6.no-visible .image-item:nth-child(9) {
+    animation: slideOutBottom 0.7s ease-out forwards;
+}
+.page-6.no-visible .image-item:nth-child(10) {
+    animation: slideOutRight 0.7s ease-out forwards;
 }
