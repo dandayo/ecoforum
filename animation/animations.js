@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }, {
                 rootMargin: '0px',
-                threshold: [0.5]
+                threshold: [0.6]
             });
 
             observer.observe(section);
@@ -36,5 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
     createSectionObserver('.page-5');
     createSectionObserver('.page-6');
     createSectionObserver('.page-7');
-
+    createSectionObserver('.page-8');
 });
