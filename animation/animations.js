@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }, {
                 rootMargin: '0px',
-                threshold: [0.6]
+                threshold: [0.5]
             });
 
             observer.observe(section);

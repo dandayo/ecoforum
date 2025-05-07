@@ -128,7 +128,7 @@
 
 /* Стиль для page-5 (формы): анимация при видимости */
 .page-5.is-visible .registration-form h2 {
-    animation: slideInTop .8s ease-out forwards;
+    animation: slideInBottom .8s ease-out forwards;
 }
 
 .page-5.is-visible .registration-form .form-wrapper {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Экофорум Ковдор</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animation/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,29 +12,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-white-200">
-    <header class="bg-white shadow-md">
+<body class="">
+    <header class="bg-[#F0EAD2] shadow-md">
         <nav class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex flex-col sm:flex-row items-center justify-between">
                 <div class="text-xl font-bold text-gray-800 mb-4 sm:mb-0">Логотип</div>
                 <div class="flex flex-wrap justify-center space-x-2 sm:space-x-4">
-                    <a href="#main" class="text-gray-600 hover:text-gray-800 px-2 py-1">Главная</a>
-                    <a href="#speakers" class="text-gray-600 hover:text-gray-800 px-2 py-1">Спикеры</a>
-                    <a href="#map" class="text-gray-600 hover:text-gray-800 px-2 py-1">Где мы</a>
-                    <a href="#registration" class="text-gray-600 hover:text-gray-800 px-2 py-1">Регистрация</a>
+                    <a href="#main" class="text-xl text-slate-700 hover:text-[#ADC178] px-2 py-1">История</a>
+                    <a href="#speakers" class="text-xl text-slate-700 hover:text-[#ADC178] px-2 py-1">Спикеры</a>
+                    <a href="#map" class="text-xl text-slate-700 hover:text-[#ADC178] px-2 py-1">Где мы</a>
+                    <a href="#registration" class="text-xl text-slate-700 hover:text-[#ADC178] px-2 py-1">Регистрация</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main class="w-full">
-        <div class="page-1 w-full">
+        <div id="title" class="page-1 w-full">
             <section class="carousel-container bg-black w-full h-[100vh] items-center relative flex">
                 <div class="main-page w-full sm:w-3/5 px-4 sm:ml-[150px] z-10">
-                    <h1 class="text-stone-50 text-3xl sm:text-5xl font-sans z-10">ЭКОФОРУМ <br> «ГИПЕРБОРЕЯ-КОВДОР ПЕРЕЗАГРУЗКА»</h1>
-                    <p class="text-stone-50 text-l sm:text-xl font-sans z-10 mt-10">Экология</p>
-                    <p class="text-stone-50 text-l sm:text-xl font-sans z-10 mt-5">Природа</p>
-                    <p class="text-stone-50 text-l sm:text-xl font-sans z-10 mt-5">Наше будущее</p>
+                    <h1 class="text-[#F0EAD2] text-3xl sm:text-5xl font-sans z-10">ЭКОФОРУМ <br> <span class="text-4xl">«ГИПЕРБОРЕЯ-КОВДОР ПЕРЕЗАГРУЗКА»</span></h1>
+                    <p class="text-[#DDE5B6] text-l sm:text-xl font-sans z-10 mt-10">Экология</p>
+                    <p class="text-[#DDE5B6] text-l sm:text-xl font-sans z-10 mt-5">Природа</p>
+                    <p class="text-[#DDE5B6] text-l sm:text-xl font-sans z-10 mt-5">Наше будущее</p>
                 </div>
                 <div class="carousel brightness-[1] flex-none z-0">
                     <div class="carousel-slide active ">
@@ -65,87 +65,96 @@
             </section>
         </div>
 
-        <div id="main" class="page-2 h-[75vh] w-full">
-            <section class="w-full">
+        <div id="main" class="page-2 min-h-[75vh] w-full flex flex-col justify-center items-center py-10 sm:py-20">
+            <section class="w-11/12 sm:w-4/5 lg:w-3/4 px-4 sm:px-6">
+                <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-sans z-10 text-center sm:text-left">Экофорум в Ковдоре: Наше Будущее Создается Здесь</h1>
+                <p class="text-base sm:text-lg lg:text-xl xl:text-2xl font-sans z-10 mt-6 sm:mt-8 lg:mt-10 text-gray-700">С 2022 года Ковдор становится центром притяжения тех, кому небезразлично будущее нашей планеты. Экофорум - это уникальная площадка, где встречаются эксперты, активисты и все, кто готов действовать ради сохранения природы и устойчивого развития.</p>
+                <p class="text-base sm:text-lg lg:text-xl xl:text-2xl font-sans z-10 mt-6 sm:mt-8 lg:mt-10 text-gray-700">
+                    Присоединяйтесь к нам, чтобы узнать о передовых экологических решениях, обменяться опытом и стать частью сообщества, формирующего зеленое будущее нашего региона и всей страны.
+                </p>
+                <p class="text-base sm:text-lg lg:text-xl xl:text-2xl font-sans z-10 mt-6 sm:mt-8 lg:mt-10 text-gray-700">
+                    Мы приглашаем вас окунуться в атмосферу знаний и вдохновения! Вас ждут интересные дискуссии, знакомство с инновационными проектами и возможность внести личный вклад в защиту окружающей среды.
+                </p>
             </section>
         </div>
-        <div id="speakers" class="page-3 min-h-[75vh] w-full flex flex-col justify-evenly items-center py-10  overflow-hidden">
-            <h1 class="speaker-title text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center px-4">Спикеры</h1>
-            <section class="speakers w-full mt-10 sm:mt-20 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-4 sm:p-10">
 
-                <div class="speaker-card group relative border border-lime-600 rounded-lg flex flex-col items-center p-4 overflow-hidden h-[350px] sm:h-[450px] transition-shadow hover:shadow-lg">
-                    <div class="w-32 h-32 sm:w-64 sm:h-64 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden mb-4 border border-gray-400">
-                        <img src="img/speak_1.jpg" alt="Фото спикера" class="object-cover w-full h-full">
+        <div class="page-3 min-h-[75vh] w-full overflow-hidden">
+            <div id="speakers" class="w-full flex flex-col justify-evenly items-center py-10 sm:py-20">
+                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 text-center px-4">Спикеры</h1>
+                <section class="speakers w-11/12 sm:w-4/5 lg:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 p-4 sm:p-6 lg:p-8">
+                    <div class="speaker-card group relative bg-[#DDE5B6] border border-lime-600 rounded-lg flex flex-col items-center p-4 sm:p-6 overflow-hidden h-[450px] transition-shadow hover:shadow-lg">
+                        <div class="w-36 h-36 sm:w-44 sm:h-44 lg:w-56 lg:h-56 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden mb-4 border border-gray-400">
+                            <img src="img/speak_1.jpg" alt="Фото спикера" class="object-cover w-full h-full">
                         </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1 text-center">Данилова Елена</h3>
-                    <p class="text-sm sm:text-base text-gray-600 text-center mb-4">Расскажет как красиво сидеть у елки</p>
+                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-1 text-center">Данилова Елена</h3>
+                        <p class="text-sm sm:text-base lg:text-lg text-gray-600 text-center mb-4">Расскажет как красиво сидеть у елки</p>
 
-                    <div class="absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <p class="text-sm sm:text-base text-gray-800 text-center">
-                            Краткое содержание о чем будет рассказывать спикер 1. 
-                            Это может быть пара предложений или небольшой абзац, описывающий основные тезисы или цели выступления.
-                        </p>
-                    </div>
-                </div>
-
-                 <div class="speaker-card group relative border border-lime-600 rounded-lg flex flex-col items-center p-4 overflow-hidden h-[350px] sm:h-[450px] transition-shadow hover:shadow-lg">
-                    <div class="w-32 h-32 sm:w-64 sm:h-64 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden mb-4 border border-gray-400">
-                        <img src="img/speak_2.jpg" alt="Фото спикера" class="object-cover w-full h-full">
+                        <div class="absolute inset-0 bg-[#F0EAD2] bg-opacity-90 flex items-center justify-center p-4 sm:p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-800 text-center">
+                                Краткое содержание о чем будет рассказывать спикер 1. 
+                                Это может быть пара предложений или небольшой абзац, описывающий основные тезисы или цели выступления.
+                            </p>
                         </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1 text-center">Гав Гав</h3>
-                    <p class="text-sm sm:text-base text-gray-600 text-center mb-4">Гав гав гавгав</p>
-
-                    <div class="absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <p class="text-sm sm:text-base text-gray-800 text-center">
-                            Краткое содержание о чем будет рассказывать спикер 2. 
-                            Тут можно добавить детали о докладе, интересные факты или ключевые выводы, которые получит аудитория.
-                        </p>
                     </div>
-                </div>
 
-                 <div class="speaker-card group relative border border-lime-600 rounded-lg flex flex-col items-center p-4 overflow-hidden h-[350px] sm:h-[450px] transition-shadow hover:shadow-lg">
-                    <div class="w-32 h-32 sm:w-64 sm:h-64 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden mb-4 border border-gray-400">
-                        <img src="img/speak_3.jpg" alt="Фото спикера" class="object-cover w-full h-full">
+                    <div class="speaker-card group relative bg-[#DDE5B6] border border-lime-600 rounded-lg flex flex-col items-center p-4 sm:p-6 overflow-hidden h-[450px] transition-shadow hover:shadow-lg">
+                        <div class="w-36 h-36 sm:w-44 sm:h-44 lg:w-56 lg:h-56 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden mb-4 border border-gray-400">
+                            <img src="img/speak_2.jpg" alt="Фото спикера" class="object-cover w-full h-full">
                         </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-1 text-center">Александр Артеменко</h3>
-                    <p class="text-sm sm:text-base text-gray-600 text-center mb-4">Очень интересная тема</p>
+                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-1 text-center">Гав Гав</h3>
+                        <p class="text-sm sm:text-base lg:text-lg text-gray-600 text-center mb-4">Гав гав гавгав</p>
 
-                    <div class="absolute inset-0 bg-white bg-opacity-90 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <p class="text-sm sm:text-base text-gray-800 text-center">
-                            Краткое содержание о чем будет рассказывать спикер 3. 
-                            Описание должно быть достаточно информативным, но при этом кратким, чтобы поместиться при наведении.
-                        </p>
+                        <div class="absolute inset-0 bg-[#F0EAD2] bg-opacity-90 flex items-center justify-center p-4 sm:p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-800 text-center">
+                                Краткое содержание о чем будет рассказывать спикер 2. 
+                                Тут можно добавить детали о докладе, интересные факты или ключевые выводы, которые получит аудитория.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-            </section>
+                    <div class="speaker-card group relative bg-[#DDE5B6] border border-lime-600 rounded-lg flex flex-col items-center p-4 sm:p-6 overflow-hidden h-[450px] transition-shadow hover:shadow-lg">
+                        <div class="w-36 h-36 sm:w-44 sm:h-44 lg:w-56 lg:h-56 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden mb-4 border border-gray-400">
+                            <img src="img/speak_3.jpg" alt="Фото спикера" class="object-cover w-full h-full">
+                        </div>
+                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-1 text-center">Александр Артеменко</h3>
+                        <p class="text-sm sm:text-base lg:text-lg text-gray-600 text-center mb-4">Очень интересная тема</p>
+
+                        <div class="absolute inset-0 bg-[#F0EAD2] bg-opacity-90 flex items-center justify-center p-4 sm:p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-800 text-center">
+                                Краткое содержание о чем будет рассказывать спикер 3. 
+                                Описание должно быть достаточно информативным, но при этом кратким, чтобы поместиться при наведении.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
         </div>
         <div class="page-7 min-h-[50vh] w-full">
-            <section class="w-full mt-[20px] mx-auto px-4 sm:px-6 py-8">
+            <section class="w-full mt-[20px] mx-auto px-4 sm:px-6 py-8 overflow-hidden">
                 <h1 class="text-l sm:text-2xl font-bold text-gray-800 mb-8 text-center">Полезные советы</h1>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:row-2 gap-4 sm:gap-6">
-                    <div class="ideas bg-white rounded-lg shadow-md p-4 sm:p-6">
+                    <div class="ideas bg-[#F0EAD2] rounded-lg shadow-md p-4 sm:p-6">
                         <h2 class="text-l font-semibold text-gray-800 mb-3">Откажитесь от одноразовой посуды.</h2>
                         <p class="text-gray-600"> Используйте свою кружку и контейнер.</p>
                     </div>
-                    <div class="ideas bg-white rounded-lg shadow-md p-4 sm:p-6">
+                    <div class="ideas bg-[#F0EAD2] rounded-lg shadow-md p-4 sm:p-6">
                         <h2 class="text-l font-semibold text-gray-800 mb-3">Выключайте свет, выходя из комнаты.</h2>
                         <p class="text-gray-600">Простой шаг, который экономит много энергии!</p>
                     </div>
-                    <div class="ideas bg-white rounded-lg shadow-md p-4 sm:p-6">
+                    <div class="ideas bg-[#F0EAD2] rounded-lg shadow-md p-4 sm:p-6">
                         <h2 class="text-l font-semibold text-gray-800 mb-3">Используйте многоразовые сумки для покупок.</h2>
                         <p class="text-gray-600"> Забудьте о пластиковых пакетах!</p>
                     </div>
-                    <div class="ideas bg-white rounded-lg shadow-md p-4 sm:p-6">
+                    <div class="ideas bg-[#F0EAD2] rounded-lg shadow-md p-4 sm:p-6">
                         <h2 class="text-l font-semibold text-gray-800 mb-3">Экономьте воду.</h2>
                         <p class="text-gray-600">Закрывайте кран, пока чистите зубы.</p>
                     </div>
-                    <div class="ideas bg-white rounded-lg shadow-md p-4 sm:p-6">
+                    <div class="ideas bg-[#F0EAD2] rounded-lg shadow-md p-4 sm:p-6">
                         <h2 class="text-l font-semibold text-gray-800 mb-3">Предпочитайте общественный транспорт, велосипед или пешие прогулки. </h2>
                         <p class="text-gray-600">Меньше выбросов в атмосферу!</p>
                     </div>
-                    <div class="ideas bg-white rounded-lg shadow-md p-4 sm:p-6">
+                    <div class="ideas bg-[#F0EAD2] rounded-lg shadow-md p-4 sm:p-6">
                         <h2 class="text-l font-semibold text-gray-800 mb-3">Посадите дерево или цветок.</h2>
                         <p class="text-gray-600">Зеленые насаждения очищают воздух и радуют глаз!</p>
                     </div>
@@ -225,8 +234,8 @@
               </section>
         </div>
 
-        <div id="map" class="page-4 min-h-[75vh] w-full flex flex-col justify-evenly items-center py-10">
-            <section class="map-container w-2/3 mt-10 p-4 sm:p-10 mb-20">
+        <div id="map" class="page-4 min-h-[50vh] w-full flex flex-col justify-evenly items-center py-10">
+            <section class="map-container w-3/4 mt-10 p-4 sm:p-10">
                 <div class="w-full px-4 sm:px-6">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center">Место проведения</h2>
                     <div class="map-wrapper rounded-lg shadow-xl overflow-hidden">
@@ -241,7 +250,7 @@
             </section>
         </div>
 
-        <div id="registration" class="page-5 min-h-[75vh] w-full flex flex-col justify-evenly items-center py-10">
+        <div id="registration" class="page-5 min-h-[50vh] w-full flex flex-col justify-evenly items-center py-10 overflow-hidden z-10">
             <section class="registration-form w-full py-10 sm:py-20">
                 <div class="w-full px-4 sm:px-6">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center">Регистрируйся!</h2>
@@ -258,10 +267,43 @@
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="container mx-auto px-4 sm:px-6 py-4">
-            <p class="text-center">&copy; Экофорум 2025.</p>
+    <footer class="bg-[#6C584C] text-white mt-12 z-20">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-around">
+            <div class="text-xl font-bold text-gray-800 mb-4 sm:mb-0">
+                Логотип
+                <div class="text-l  mb-4 sm:mb-0">
+                    <p>Какой нибудь воодушевляющий текст</p>
+                </div>
+            </div>
+
+            <div class="navigation flex flex-col">
+                <h3 class="text-l bold">Навигация</h3>
+                <a href="#title" class="">Главная</a>
+                <a href="#main" class="">История</a>
+                <a href="#speakers" class="">Спикеры</a>
+                <a href="#map" class="">Где мы</a>
+                <a href="#registration" class="">Галерея</a>
+                <a href="#registration" class="">Регистрация</a>
+            </div>
+            <div class="contacts flex flex-col">
+                <h3>Контакты</h3>
+                <div class="vk">
+                    <a>
+                        <img />
+                        <p>Vk</p>
+                    </a>
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone-alt mt-1 mr-3 text-green-400"></i>
+                    <p>+7999 999-99-99</p>
+                </div>
+                <div class="e-mail">
+                    <i class="fas fa-envelope mt-1 mr-3 text-green-400"></i>
+                    <p>email@google.com</p>
+                </div>
+            </div>
         </div>
+        <p class="text-center p-5">&copy; Экофорум 2025.</p>
     </footer>
 
     </div>
