@@ -1,7 +1,3 @@
-body{
-    
-}
-
 /* Карусель */
 .carousel {
     position: absolute;
@@ -25,3 +21,4 @@ body{
 .carousel-slide.active {
     opacity: 1;
 }
+

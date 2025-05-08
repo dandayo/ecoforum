@@ -1,0 +1,104 @@
+/* Фоновые декоративные элементы */
+.background-decor {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  
+}
+
+.background-decor img {
+  position: absolute;
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Облака */
+.background-decor img[alt="Облака"] {
+  top: 2.5rem;
+  left: 0;
+  width: 16rem;
+  opacity: 0.8;
+  animation: cloud-move 65s linear infinite;
+}
+@media (min-width: 640px) {
+  .background-decor img[alt="Облака"] {
+    width: 32rem;
+  }
+}
+@keyframes cloud-move {
+  0% { left: -30%; }
+  100% { left: 100%; }
+}
+
+/* Солнце */
+.background-decor img[alt="Солнце"] {
+  top: 4rem;
+  left: 6rem;
+  width: 10rem;
+  opacity: 0.9;
+  animation: sun-spin 50s linear infinite;
+}
+@media (min-width: 640px) {
+  .background-decor img[alt="Солнце"] {
+    width: 12rem;
+    left: 4rem;
+  }
+}
+@keyframes sun-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Елки */
+.background-decor img[alt="Елки"] {
+  bottom: -2rem;
+  right: 0;
+  width: 19rem;
+  opacity: 0.9;
+}
+@media (min-width: 640px) {
+  .background-decor img[alt="Елки"] {
+    width: 40rem;
+  }
+}
+
+/* Палатка */
+.background-decor img[alt="Палатка"] {
+  bottom: -5.5rem;
+  left: 10rem;
+  width: 15rem;
+  opacity: 0.95;
+}
+@media (min-width: 640px) {
+  .background-decor img[alt="Палатка"] {
+    width: 28rem;
+    left: 10rem;
+  }
+}
+
+/* Костер */
+.background-decor img[alt="Костер"] {
+  bottom: 0;
+  left: 18rem;
+  width: 5rem;
+  opacity: 0.95;
+}
+@media (min-width: 640px) {
+  .background-decor img[alt="Костер"] {
+    bottom: 0rem;
+    width: 10rem;
+    left: 47rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .background-decor img[alt="Облака"] { top: 2rem; width: 10rem; }
+  .background-decor img[alt="Солнце"] { top: 1rem; right: 1rem; width: 6rem; }
+  .background-decor img[alt="Елки"] { width: 7rem; }
+  .background-decor img[alt="Палатка"] { width: 5rem; right: 2rem; }
+  .background-decor img[alt="Костер"] { width: 3.5rem; right: 4rem; }
+} 
