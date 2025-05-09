@@ -1516,6 +1516,22 @@ video {
     grid-column: span 2 / span 2;
   }
 
+  .md\:max-h-\[200vh\] {
+    max-height: 200vh;
+  }
+
+  .md\:min-h-\[120vh\] {
+    min-height: 120vh;
+  }
+
+  .md\:min-h-\[150vh\] {
+    min-height: 150vh;
+  }
+
+  .md\:min-h-\[200vh\] {
+    min-height: 200vh;
+  }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
