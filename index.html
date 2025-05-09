@@ -18,14 +18,16 @@
         <img src="img/sun.png" alt="Солнце" draggable="false">
         <img src="img/облака.png" alt="Облака" draggable="false" ">
         <img src="img/палатка.png" alt="Палатка" draggable="false">
-        <img src="img/fire-1.png" alt="Костер" draggable="false">
+        <img src="img/fire.gif" alt="Костер" draggable="false">
         <img src="img/елки.png" alt="Елки" draggable="false">
     </div>
 <body class="bg-[#DDE5B6]">
     <header class="bg-[#F0EAD2] shadow-md z-10">
         <nav class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex flex-col sm:flex-row items-center justify-between">
-                <div class="text-xl font-bold text-gray-800 mb-4 sm:mb-0">Логотип</div>
+                <div class="text-xl font-bold text-gray-800 mb-4 sm:mb-0">
+                    <img class="logo w-20" src="img/logo.jpg" alt="Лого" />
+                </div>
                 <div class="flex flex-wrap justify-center space-x-2 sm:space-x-4">
                     <a href="#main" class="text-xl text-slate-700 hover:text-[#ADC178] px-2 py-1">История</a>
                     <a href="#speakers" class="text-xl text-slate-700 hover:text-[#ADC178] px-2 py-1">Спикеры</a>
@@ -276,43 +278,60 @@
         </div>
     </main>
 
-    <footer class="bg-[#6C584C] text-white mt-12 z-10 p-10">
-        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-around">
-            <div class="text-xl font-bold text-gray-800 mb-4 sm:mb-0">
-                Логотип
-                <div class="text-l  mb-4 sm:mb-0">
-                    <p>Какой нибудь воодушевляющий текст</p>
+    <footer class="footer bg-[#6C584C] text-white py-12 z-10">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Logo and Description -->
+                <div class="space-y-4 logo-container">
+                    <div class="w-42 h-42 rounded-lg flex items-center justify-center">
+                        <!-- Здесь будет логотип -->
+                        <img src="img/logo-footer.jpg" alt="Логотип Экофорум" class="w-40 h-40 object-contain">
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-[#FEFAE0] mb-4">Навигация</h3>
+                    <nav class="flex flex-col space-y-2">
+                        <a href="#title" class="text-[#DDE5B6] hover:text-[#F0EAD2] transition-colors duration-300">Главная</a>
+                        <a href="#main" class="text-[#DDE5B6] hover:text-[#F0EAD2] transition-colors duration-300">История</a>
+                        <a href="#speakers" class="text-[#DDE5B6] hover:text-[#F0EAD2] transition-colors duration-300">Спикеры</a>
+                        <a href="#map" class="text-[#DDE5B6] hover:text-[#F0EAD2] transition-colors duration-300">Где мы</a>
+                        <a href="#registration" class="text-[#DDE5B6] hover:text-[#F0EAD2] transition-colors duration-300">Регистрация</a>
+                    </nav>
+                </div>
+
+                <!-- Contacts -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-[#FEFAE0] mb-4">Контакты</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-[#DDE5B6]" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <p class="text-[#DDE5B6] hover:text-[#F0EAD2] transition-colors duration-300">+7 (999) 999-99-99</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-[#DDE5B6]" fill="currentColor" viewBox="0 0 24 24"  enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/></svg>                            </svg>
+                            <a href="https://vk.com/forum_kovdor" class="text-[#DDE5B6] hover:text-[#F0EAD2] transition-colors duration-300" target="_blank">Вконтакте</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-[#DDE5B6]" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <a href="mailto:email@google.com" class="text-[#DDE5B6] hover:text-[#F0EAD2] transition-colors duration-300">email@google.com</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="navigation flex flex-col">
-                <h3 class="text-l bold">Навигация</h3>
-                <a href="#title" class="">Главная</a>
-                <a href="#main" class="">История</a>
-                <a href="#speakers" class="">Спикеры</a>
-                <a href="#map" class="">Где мы</a>
-                <a href="#registration" class="">Галерея</a>
-                <a href="#registration" class="">Регистрация</a>
-            </div>
-            <div class="contacts flex flex-col">
-                <h3>Контакты</h3>
-                <div class="vk">
-                    <a>
-                        <img />
-                        <p>Vk</p>
-                    </a>
-                </div>
-                <div class="phone">
-                    <i class="fas fa-phone-alt mt-1 mr-3 text-green-400"></i>
-                    <p>+7999 999-99-99</p>
-                </div>
-                <div class="e-mail">
-                    <i class="fas fa-envelope mt-1 mr-3 text-green-400"></i>
-                    <p>email@google.com</p>
-                </div>
+            <!-- Copyright -->
+            <div class="mt-12 pt-8 border-t border-[#DDE5B6]/20">
+                <p class="text-center text-[#DDE5B6] text-sm">
+                    © 2025 Экофорум Ковдор.
+                </p>
             </div>
         </div>
-        <p class="text-center p-5">&copy; Экофорум 2025.</p>
     </footer>
     </div>
     <script src="scripts.js"></script>
