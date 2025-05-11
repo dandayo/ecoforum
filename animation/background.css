@@ -140,16 +140,22 @@
   .background-decor img[alt="Палатка"] { width: 17rem; }
   .background-decor img[alt="Костер"] { width: 7rem; }
 
+  @keyframes cloud-move {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
     /* Облака */
     .background-decor img[alt="Облака"] {
         top: 2.5rem;
         left: 0;
+        animation: cloud-move 25s linear infinite;
     }
   
   /* Солнце */
   .background-decor img[alt="Солнце"] {
-    top: 4rem;
-    left: 2rem;
+    top: 1rem;
+    left: -2rem;
   }
     /* Елки */
     .background-decor img[alt="Елки"] {
@@ -174,7 +180,6 @@
   .background-decor img[alt="Солнце"] { width: 10rem; }
   .background-decor img[alt="Елки"] { width: 24rem; }
   .background-decor img[alt="Палатка"] { width: 14rem; }
-
       /* Облака */
       .background-decor img[alt="Облака"] {
         top: 2.5rem;
