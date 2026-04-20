@@ -1,4 +1,4 @@
-/* Фоновые декоративные элементы */
+/* Background */
 .background-decor {
   position: fixed;
   inset: 0;
@@ -15,7 +15,7 @@
   pointer-events: none;
 }
 
-/* Облака */
+/* Clouds */
 .background-decor img[alt="Облака"] {
   top: .5rem;
   left: 0;
@@ -24,7 +24,7 @@
   animation: cloud-move 65s linear infinite;
 }
 
-/* Солнце */
+/* Sun */
 .background-decor img[alt="Солнце"] {
   top: 4rem;
   left: 4rem;
@@ -33,7 +33,7 @@
   animation: sun-spin 50s linear infinite;
 }
 
-/* Елки */
+/* Pines */
 .background-decor img[alt="Елки"] {
   bottom: -3rem;
   right: -2rem;
@@ -41,7 +41,7 @@
   opacity: 0.9;
 }
 
-/* Палатка */
+/* Camp */
 .background-decor img[alt="Палатка"] {
   bottom: -8rem;
   left: 8rem;
@@ -49,7 +49,7 @@
   opacity: 0.85;
 }
 
-/* Костер */
+/* Fire */
 .background-decor img[alt="Костер"] {
   bottom: -2rem;
   left: 50rem;
@@ -57,7 +57,7 @@
   opacity: 0.75;
 }
 
-/* Анимации */
+/* ANIMATION */
 @keyframes cloud-move {
   0% { left: -30%; }
   100% { left: 100%; }
@@ -68,7 +68,7 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Медиа-запросы для адаптивности */
+/* Adaptive response */
 @media (max-width: 1024px) {
   .background-decor img[alt="Облака"] { width: 32rem; }
   .background-decor img[alt="Солнце"] { width: 12rem; left: 4rem; }
@@ -77,19 +77,19 @@
   .background-decor img[alt="Костер"] { width: 12rem; left: 47rem; bottom: -1.5rem; }
 
 
-    /* Елки */
+    /* Pines */
     .background-decor img[alt="Елки"] {
         bottom: -2rem;
         right: -15rem;
     }
 
-    /* Палатка */
+    /* Camp */
     .background-decor img[alt="Палатка"] {
         bottom: -5.5rem;
         left: 0rem;
       }
 
-      /* Костер */
+      /* Fire */
     .background-decor img[alt="Костер"] {
         bottom: -1rem;
         left: 29rem;
@@ -103,30 +103,30 @@
   .background-decor img[alt="Палатка"] { width: 16rem; left: 8rem; }
   .background-decor img[alt="Костер"] { width: 8rem; left: 25rem; }
 
-    /* Облака */
+    /* Clouds */
     .background-decor img[alt="Облака"] {
         top: 2.5rem;
         left: 0;
     }
   
-  /* Солнце */
+  /* Sun */
   .background-decor img[alt="Солнце"] {
     top: 4rem;
     left: 2rem;
   }
-    /* Елки */
+    /* Pines */
     .background-decor img[alt="Елки"] {
         bottom: -2rem;
         right: -10rem;
     }
 
-    /* Палатка */
+    /* Camp */
     .background-decor img[alt="Палатка"] {
         bottom: -3rem;
         left: 0rem;
       }
 
-      /* Костер */
+      /* Fire */
     .background-decor img[alt="Костер"] {
         bottom: 0rem;
         left: 19rem;
@@ -145,31 +145,31 @@
     100% { left: 100%; }
   }
 
-    /* Облака */
+    /* Clouds */
     .background-decor img[alt="Облака"] {
         top: 2.5rem;
         left: 0;
         animation: cloud-move 25s linear infinite;
     }
   
-  /* Солнце */
+  /* Sun */
   .background-decor img[alt="Солнце"] {
     top: 1rem;
     left: -2rem;
   }
-    /* Елки */
+    /* Pines */
     .background-decor img[alt="Елки"] {
         bottom: -2rem;
         right: -16rem;
     }
 
-    /* Палатка */
+    /* Camp */
     .background-decor img[alt="Палатка"] {
         bottom: -3.5rem;
         left: -2rem;
       }
 
-      /* Костер */
+      /* Fire */
     .background-decor img[alt="Костер"] {
         opacity: 0;
     }  
@@ -186,18 +186,18 @@
         left: 0;
     }
   
-  /* Солнце */
+  /* Sun */
   .background-decor img[alt="Солнце"] {
     top: 2rem;
     left: 0rem;
   }
-    /* Елки */
+    /* Pines */
     .background-decor img[alt="Елки"] {
         bottom: -2rem;
         right: -10rem;
     }
 
-    /* Палатка */
+    /* Camp */
     .background-decor img[alt="Палатка"] {
         bottom: -3rem;
         left: -1rem;

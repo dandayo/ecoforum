@@ -48,16 +48,12 @@
     animation-delay: 1s;
 }
 
-/* Базовое состояние карточек и заголовков в page-3 */
-/* Изначально невидимые, готовые к анимации появления */
 .page-3 .speaker-card, .page-3 h1,
 .page-7 .ideas, .page-7 h1  { 
     opacity: 0;
     transform: none; 
 }
 
-
-/* Анимации появления при добавлении класса is-visible */
 .page-3.is-visible h1 {
   animation: slideInTop 1.2s ease-out forwards;
 }
@@ -76,7 +72,7 @@
   animation-delay: 0.5s;
 }
 
-/* Анимации появления page 7 при добавлении класса is-visible */
+/* Animation for page 7 is-visible */
 
 .page-7.is-visible h1 {
     animation: slideInLeft 0.5s ease-out forwards;
@@ -105,28 +101,20 @@
     animation: slideInLeft 0.5s  forwards;
 }
 
-
-/* Стиль для page-4 (карты): начальное состояние */
 .page-4 .map-container > * {
     opacity: 0;
 }
 
-
-
-/* Стиль для page-4 (карты): анимация при видимости */
 .page-4.is-visible .map-container > * {
     animation: fadeIn 1.9s ease-out forwards;
 }
 
 
-
-/* Стиль для page-5 (формы): начальное состояние */
 .page-5 .registration-form h2,
 .page-5 .registration-form .form-wrapper {
     opacity: 0;
 }
 
-/* Стиль для page-5 (формы): анимация при видимости */
 .page-5.is-visible .registration-form h2 {
     animation: slideInBottom .8s ease-out forwards;
 }
@@ -136,7 +124,7 @@
 }
 
 
-/* Стиль для page-6 (формы): анимация при видимости */
+/* Style for page-6 */
 .page-6 .image-item, .page-6 h2 {
     opacity: 0;
 }
@@ -190,9 +178,8 @@
 
 
 
-/* --- Анимации исчезновения no-visible --- */
+/* --- Animation NO-VISIBLE --- */
 
-/* Переименуем существующие keyframes для ясности */
 @keyframes slideOutLeft { 
     0% { opacity: 1; transform: translateX(0); }
     100% { opacity: 0; transform: translateX(-550px); } 
@@ -212,13 +199,13 @@
     100% { opacity: 0; transform: translateX(550px); } 
 }
 
-/* Анимация для плавного удаления */
+/* Animation for delete */
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
 
-/* Применение анимаций исчезновения для page-3 no-visible */
+/* Animation for delete content page-3 no-visible */
 .page-3.no-visible h1 {
   animation: slideOutUp 0.8s ease-out forwards; 
 }
@@ -235,7 +222,6 @@
   animation: slideOutRight 0.8s ease-out forwards; 
 }
 
-/* Пример для page-7: */
 .page-7.no-visible h2 {
     animation: slideOutRight 0.5s ease-out forwards;
 }
@@ -264,12 +250,10 @@
 }
 
 
-/* Пример для page-4: */
 .page-4.no-visible .map-container > * {
     animation: fadeOut 0.8s ease-out forwards;
 }
 
-/* Пример для page-5: */
 .page-5.no-visible .registration-form h2 {
     animation: slideOutBottom 0.8s ease-out forwards;
 }
@@ -277,9 +261,6 @@
 .page-5.no-visible .registration-form .form-wrapper {
     animation: slideOutBottom 0.8s ease-out forwards; 
 }
-
-
-/* Применение анимаций исчезновения для page-6 no-visible */
 
 .page-6.no-visible h2 {
     animation: fadeOut .9s ease-out forwards;;
